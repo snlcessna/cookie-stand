@@ -1,8 +1,6 @@
 'use strict';
 //
 
-var workingHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-
 var locationsObject = {
   0: 'First and Pike',
   1: 'SeaTac Airport',
@@ -61,9 +59,9 @@ hourlySales.generateRandom = function(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-.generateRandom(minHourlyCust, maxHourlyCust);
-console.log(loca.generateRandom(1, 5));
-console.log(corgiFail.generateRandom(1, 5));
+hourlySales.generateRandom(minHourlyCust, maxHourlyCust);
+//console.log(.generateRandom(1, 5));
+console.log(hourlySales.generateRandom(1, 5));
 
 
 locations.minHourlyCust = function(){
