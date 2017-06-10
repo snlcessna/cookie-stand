@@ -1,15 +1,7 @@
 'use strict';
 //
- var locations = [
-   'First and Pike',
-   'SeaTac Aiport',
-   'Seattle Center',
-   'Capitol Hill',
-   'Alki',
-];
 
-//
-// names[1];
+var workingHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 var locationsObject = {
   0: 'First and Pike',
@@ -20,34 +12,59 @@ var locationsObject = {
 };
 
 var firstAndPike = {
+  location: '1st and Pike',
   minHourlyCust: '23',
   maxHourlyCust: '65',
   avgPerCust: '6.3',
+  workingHours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
 };
 
 var seaTacAirport = {
-  minHourlyCust: '3',
+  location : 'SeaTac Airport',
+  minHourlyCust : '3',
   maxHourlyCust: '24',
   avgPerCust: '1.2',
+  workingHours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
 };
 
 var seattleCenter = {
+  location: 'Seattle Center',
   minHourlyCust: '11',
   maxHourlyCust: '38',
   avgPerCust: '3.7',
+  workingHours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
 };
 
 var capitolHill = {
+  location: 'Captiol Hill',
   minHourlyCust: '20',
   maxHourlyCust: '38',
   avgPerCust: '2.3',
+  workingHours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
 };
 
 var alki = {
+  location: 'Alki',
   minHourlyCust: '2',
   maxHourlyCust: '16',
   avgPerCust: '4.6',
+  workingHours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
 };
+
+var hourlySales = function(minHourlyCust, maxHourlyCust, avgPerCust) {
+  this.minHourlyCust = minHourlyCust;
+  this.maxHourlyCust = maxHourlyCust;
+  this.avgPerCust = avgPerCust;
+};
+
+hourlySales.generateRandom = function(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+.generateRandom(minHourlyCust, maxHourlyCust);
+console.log(loca.generateRandom(1, 5));
+console.log(corgiFail.generateRandom(1, 5));
+
 
 locations.minHourlyCust = function(){
   console.log('Minimum customers per hour at ' + locationName + ' is ' + minHourlyCust + '.');
