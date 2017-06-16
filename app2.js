@@ -49,15 +49,12 @@ Store.prototype.makeRow = function () {
 
   //Step 3 - append to the DOM
   tableBodyEl.appendChild(newRowEl);
-  tableBodyEl.appendChild(tableFootEl);
 
 };
 
 var tableEl = document.getElementById('generated-table');
 var tableBodyEl = document.createElement('tbody');
-var tableFootEl = document.createElement('tfoot');
 tableEl.appendChild(tableBodyEl);
-tableBodyEl.appendChild(tableFootEl);
 
 var firstAndPikeStore = new Store('1st and Pike', 23, 65, 6.3);
 var seaTacStore = new Store('SeaTac Airport', 3, 24, 1.2);
@@ -76,33 +73,16 @@ for (var j = 0; j < allStores.length; j++) {
   allStores[j].makeRow();
 }
 
+function cookieCountAll() {
+  for(var i = 0; i < allStores.length; i++) {
+    cookieCount(allStores[i]);
+  }
+}
+
 function cookieCount(store) {
   cookiesPerHour(store);
   cookiesTotal(store);
-
+  //makeRow(store);
 }
 
-var totalPerHour = ['Total '];
-function totalArray(allStores) {
-
-  for (var i = 0; i < Math.max(firstAndPikeStore.cookiesPerHour[i], seaTacStore.cookiesPerHour[i], seaCenterStore.cookiesPerHour[i], capitolHillStore.cookiesPerHour[i], alkiStore.cookiesPerHour[i]); i++) {
-    totalPerHour.push((firstAndPikeStore.cookiesPerHour[i]) + (seaTacStore.cookiesPerHour[i]) + (seaCenterStore.cookiesPerHour[i]) + (capitolHillStore.cookiesPerHour[i]) + (alkiStore.cookiesPerHour[i]));
-
-  }
-
-  //var newFoot = document.createElement('tr');
-  var newFoot = document.createElement('tr');
-  tableFootEl.appendChild(newFoot);
-  for (i in totalPerHour) {
-    var totalPerHourEl = document.createElement('td');
-    totalPerHourEl.textContent = totalPerHour[i];
-    tableFootEl.appendChild(totalPerHourEl);
-  }
-
-  console.log(totalPerHour);
-  return totalPerHour;
-}
-
-//allStores = allStores.concat(totalPerHour);
-console.log(allStores);
-totalArray();
+cookieCountAll();
