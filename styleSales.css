@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Corben', Arial, Times, serif;
+}
+
+h1, h6 {
+  text-align: center;
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+table {
+  font-family: 'Nobile', Helvetica, Courier, sans-serif;
+  border: 3px solid black;
+  border-spacing: inherit;
+
+}
+tfoot tr {
+  border: 1px solid black;
+  text-align: center;
+  background-color: #e8e41e;
+  color: black;
+}
+
+table.center {
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+th {
+  background-color: black;
+  color: white;
+}
+
+td {
+  background-color: #e8e41e;
+  color: black;
+  border: 1px solid black;
+  text-align: center;
+}
+
+body {
+  background-image: url(https://media.giphy.com/media/odTL3KSvrJhV6/giphy.gif);
+  background-size: auto;
+}

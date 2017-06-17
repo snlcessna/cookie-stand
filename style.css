@@ -1,7 +1,13 @@
-table {
-  border: 1px solid black;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Corben', Arial, Times, serif;
 }
 
-td {
-  border: 1px solid black;
+h1, h3, h5 {
+  text-align: center;
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+body {
+  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/1b/82/f0/1b82f0a9dd19c433733ad0e9935974ef.gif);
+  background-size: cover;
 }
