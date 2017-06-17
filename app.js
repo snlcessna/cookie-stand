@@ -55,7 +55,7 @@ var tableEl = document.getElementById('generated-table');
 var tableBodyEl = document.createElement('tbody');
 var tableFootEl = document.createElement('tfoot');
 tableEl.appendChild(tableBodyEl);
-tableBodyEl.appendChild(tableFootEl);
+tableEl.appendChild(tableFootEl);
 
 var firstAndPikeStore = new Store('1st and Pike', 23, 65, 6.3);
 var seaTacStore = new Store('SeaTac Airport', 3, 24, 1.2);
@@ -81,16 +81,20 @@ function totalArray(allStores) {
 
   }
 
-  var newFoot = document.createElement('tr');
-  newFoot.textContent = '_______Total_______';
-  tableFootEl.appendChild(newFoot);
+  var newFootEl = document.createElement('tr');
+  //tableFootEl.appendChild(newFootEl);
+
+  var headerOfF = document.createElement('td');
+  headerOfF.textContent = 'Total';
+  newFootEl.appendChild(headerOfF);
 
   for (i in totalPerHour) {
     var totalPerHourEl = document.createElement('td');
     totalPerHourEl.textContent = totalPerHour[i];
-    tableBodyEl.appendChild(totalPerHourEl);
+    newFootEl.appendChild(totalPerHourEl);
   }
 
+  tableEl.appendChild(newFootEl);
   return totalPerHour;
 }
 
