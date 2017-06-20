@@ -10,5 +10,5 @@ h1, h3, h5 {
 
 body {
   background-image: url(https://s-media-cache-ak0.pinimg.com/originals/1b/82/f0/1b82f0a9dd19c433733ad0e9935974ef.gif);
-  background-size: cover;
+  background-size:contain;
 }
